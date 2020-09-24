@@ -1,5 +1,8 @@
-alias robomongo="/usr/local/bin/robomongo/bin/robo3t &"
+WORKSPACE=~/workspace
+alias yggdrasil='cd $WORKSPACE/yggdrasil'
 alias ebash='vim + ~/.bashrc && source ~/.bashrc'
 alias psx='ps aux | grep $1'
 alias k9='kill -9 $1'
-export MONGO_URL=mongodb://localhost:27017/meteor
+
+export AWS_PROFILE=sops-dev
+

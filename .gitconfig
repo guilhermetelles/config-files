@@ -1,6 +1,6 @@
 [user]
       name = guilhermetelles
-      email = guilherme.santos@linte.com.br
+      email = guilhermegts@gmail.com
 
 [alias]
       unstage = reset HEAD --
@@ -31,3 +31,4 @@
 [rerere]
 # Reuse recorded resolution
 enabled = true
+
