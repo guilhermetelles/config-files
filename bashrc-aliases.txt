@@ -1,8 +1,15 @@
+# Tellescommands
 WORKSPACE=~/workspace
-alias yggdrasil='cd $WORKSPACE/yggdrasil'
+alias ygg='cd $WORKSPACE/yggdrasil'
 alias ebash='vim + ~/.bashrc && source ~/.bashrc'
 alias psx='ps aux | grep $1'
 alias k9='kill -9 $1'
-
+export AWS_SDK_LOAD_CONFIG=1
 export AWS_PROFILE=sops-dev
 
+alias ygg-clean="ygg && pnpm clean:dist && pnpm clean:dependencies && pnpm i"
+
+export UBX_PS1='\[\e[0;1;38;5;208;48;5;53m\] ▪\[\e[0;1;97;48;5;53m\] unbox\[\e[0;1;3;38;5;89;48;5;53m\](\[\e[0;1;2;3;38;5;214;48;5;53m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\[\e[0;1;3;38;5;89;48;5;53m\])\[\e[0;48;5;53m\]\w\[\e[0;1;38;5;220;48;5;53m\]\$\[\e[0;48;5;53m\] \[\e[0;38;5;53m\]▙▚ \[\e[0m\]'
+alias unbox-prod="export AWS_PROFILE=sops-prod && export PS1='$(echo $UBX_PS1)' && ygg"
+alias gif-to-webm='ffmpeg -i $1 -c vp9 -b:v 0 -crf 41 -vf scale=800:-1 $2'
+alias gif-to-mp4="ffmpeg -i ${1} -vcodec libx264 -b:v 0 -crf 25 -vf scale=800:-1 -f mp4 -pix_fmt yuv420p ${2}"

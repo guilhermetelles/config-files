@@ -1,5 +1,5 @@
 [user]
-      name = guilhermetelles
+      name = Guilherme Telles
       email = guilhermegts@gmail.com
 
 [alias]
@@ -31,4 +31,3 @@
 [rerere]
 # Reuse recorded resolution
 enabled = true
-
